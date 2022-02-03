@@ -1,0 +1,22 @@
+/* Luciole font CSS */
+
+@font-face {
+  font-family: 'Luciole';
+  src: url('../fonts/Luciole-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Luciole';
+  font-style: italic;
+  src: url('../fonts/Luciole-Regular-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Luciole';
+  font-weight: bold;
+  src: url('../fonts/Luciole-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Luciole';
+  font-style: italic;
+  font-weight: bold;
+  src: url('../fonts/Luciole-Bold-Italic.ttf') format('truetype');
+}

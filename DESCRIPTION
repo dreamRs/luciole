@@ -1,0 +1,23 @@
+Package: luciole
+Title: A typeface for Visually Impaired People
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Victor",
+             family = "Perrier",
+             role = c("aut", "cre", "cph"),
+             email = "victor.perrier@dreamrs.fr",
+             comment = "R package"),
+      person(given = "Fanny",
+             family = "Meyer",
+             role = "aut"),
+      person(given = "Laurent Bourcellier & Jonathan Perez",
+             role = "cph",
+             email = "contact@luciole-vision.com",
+             comment = "Luciole Typeface <https://luciole-vision.com>"))
+Description: A new typeface developed explicitly for visually impaired people.
+License: CC BY 4.0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    htmltools
