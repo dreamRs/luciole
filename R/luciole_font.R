@@ -3,25 +3,28 @@
 #'
 #' @param selector CSS selector for which to use the font,
 #'  usually an HTML tag, default to `"body"` (all document).
+#'  If `NULL` style tag isn't included.
 #'
-#' @return an object of class shiny.tag` with a [htmltools::htmlDependency()]
+#' @return an [htmltools::htmlDependency()].
 #' @export
 #'
-#' @importFrom htmltools attachDependencies tags htmlDependency
+#' @importFrom htmltools tags htmlDependency
 #' @importFrom utils packageVersion
 #'
 #' @example examples/luciole_font.R
 luciole_font <- function(selector = "body") {
-  css <- paste(selector, "{ font-family: 'Luciole', sans-serif; }")
-  attachDependencies(
-    x = tags$style(css),
-    value = htmlDependency(
-      name = "luciole",
-      version = as.character(packageVersion("luciole")),
-      src = list(href = "luciole", file = "assets"),
-      package = "luciole",
-      stylesheet = "css/luciole.css"
-    )
+  if (!is.null(selector)) {
+    css <- paste(selector, "{ font-family: 'Luciole', sans-serif !important; }")
+    css <- as.character(tags$style(css))
+  }
+  htmlDependency(
+    name = "luciole",
+    version = as.character(packageVersion("luciole")),
+    src = list(file = "assets"),
+    package = "luciole",
+    stylesheet = "css/luciole.css",
+    all_files = TRUE,
+    head = css
   )
 }
 

@@ -11,7 +11,7 @@ luciole_font(selector = "body")
 usually an HTML tag, default to \code{"body"} (all document).}
 }
 \value{
-an object of class shiny.tag` with a \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}
+an \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}.
 }
 \description{
 Integrate Luciole typeface in web pages
