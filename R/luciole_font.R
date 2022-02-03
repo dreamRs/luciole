@@ -12,7 +12,7 @@
 #' @importFrom utils packageVersion
 #'
 #' @example examples/luciole_font.R
-luciole_font <- function(selector = "body") {
+luciole_font_dependency <- function(selector = "body") {
   if (!is.null(selector)) {
     css <- paste(selector, "{ font-family: 'Luciole', sans-serif !important; }")
     css <- as.character(tags$style(css))
@@ -27,4 +27,16 @@ luciole_font <- function(selector = "body") {
     head = css
   )
 }
+
+
+font_luciole <- function() {
+  structure(list(
+    families = "'Luciole', sans-serif",
+    html_deps = htmltools::tagFunction(function() {
+      luciole::luciole_font_dependency(NULL)
+    })
+  ), class = c("font_collection", "list"))
+}
+
+
 
