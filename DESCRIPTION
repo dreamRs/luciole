@@ -15,6 +15,7 @@ Authors@R:
              email = "contact@luciole-vision.com",
              comment = "Luciole Typeface <https://luciole-vision.com>"))
 Description: A new typeface developed explicitly for visually impaired people.
+    Visit the official website for more information: <https://luciole-vision.com>.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -23,3 +24,7 @@ Imports:
     htmltools,
     ragg,
     systemfonts
+Suggests: 
+    ggplot2,
+    knitr
+VignetteBuilder: knitr
