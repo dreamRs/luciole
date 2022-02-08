@@ -2,7 +2,7 @@
 % Please edit documentation in R/luciole_font.R
 \name{luciole_font_dependency}
 \alias{luciole_font_dependency}
-\title{Integrate Luciole typeface in web pages}
+\title{HTML dependency for Luciole typeface}
 \usage{
 luciole_font_dependency(selector = "body")
 }
@@ -15,7 +15,8 @@ If \code{NULL} style tag isn't included.}
 an \code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}.
 }
 \description{
-Integrate Luciole typeface in web pages
+It can be used to integrate Luciole font
+into web pages (Shiny applications or RMarkdown documents).
 }
 \examples{
 library(luciole)
