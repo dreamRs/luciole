@@ -51,14 +51,29 @@ In Rstudio, to use Luciole you have to select the ragg device to render plots, s
 
 ## Shiny
 
-For using Luciole with all text rendered in HTML in a shiny application, use in your UI:
+Load Luciole CSS file into your page with:
 
 ```{r luciole_font, eval=FALSE}
-luciole_font()
+luciole_font_dependency()
 ```
+
+By default a style tag is injected in the head of the page to use Luciole in he whole body.
 
 Example:
 
 ```{r shiny, eval=FALSE}
+library(shiny)
 
+ui <- fluidPage(
+  
+  luciole_font_dependency(),
+  
+  tags$h2("Hello, I'm using Luciole font to improve lisibility.")
+)
+
+server <- function(input, output, session) {
+  
+}
+
+shinyApp(ui, server)
 ```
