@@ -34,6 +34,7 @@ luciole_font_dependency <- function(selector = "body") {
 }
 
 
+
 font_luciole <- function() {
   structure(list(
     families = "'Luciole', sans-serif",

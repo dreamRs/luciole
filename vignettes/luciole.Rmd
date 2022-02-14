@@ -9,13 +9,16 @@ vignette: >
 
 ```{r, include = FALSE}
 ragg_png <- function(..., res = 150) {
-  ragg::agg_png(..., res = res, units = "in")
+  ragg::agg_png(..., res = res)
 }
 
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "figures/",
+  fig.path = "figures/", 
+  fig.retina = 1, 
+  fig.height = 6, 
+  fig.width = 8,
   out.width = "100%",
   dev = "ragg_png"
 )
@@ -35,13 +38,13 @@ luciole::register_luciole()
 ```
 
 
-The declare the `"Luciole"` family in your graphics:
+Then declare the `"Luciole"` family in your graphics:
 
 ```{r ggplot2}
 library(ggplot2)
 ggplot() +
   aes(0, 0, label = "lisibilité") +
-  geom_text(size = 10, family = "Luciole") + 
+  geom_text(size = 20, family = "Luciole") + 
   theme_grey(base_family = "Luciole")
 ```
 
