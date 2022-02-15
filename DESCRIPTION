@@ -22,8 +22,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     htmltools,
-    ragg,
-    systemfonts
+    showtext,
+    sysfonts
 Suggests: 
     ggplot2,
     knitr

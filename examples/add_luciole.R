@@ -1,8 +1,8 @@
 library(luciole)
 library(ggplot2)
 
-# Register font
-register_luciole()
+# Add font
+add_luciole()
 
 # use with ggplot2
 ggplot() +

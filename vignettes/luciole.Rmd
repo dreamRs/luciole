@@ -8,19 +8,13 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
-ragg_png <- function(..., res = 150) {
-  ragg::agg_png(..., res = res)
-}
-
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "figures/", 
   fig.retina = 1, 
   fig.height = 6, 
-  fig.width = 8,
-  out.width = "100%",
-  dev = "ragg_png"
+  fig.width = 8
 )
 ```
 
@@ -31,10 +25,10 @@ library(luciole)
 
 ## ggplot2
 
-Register Luciole font with:
+Add Luciole font with:
 
-```{r register_luciole}
-luciole::register_luciole()
+```{r add_luciole}
+add_luciole()
 ```
 
 
@@ -49,7 +43,6 @@ ggplot() +
 ```
 
 
-In Rstudio, to use Luciole you have to select the ragg device to render plots, see [this excellent blogpost by June Choe ](https://yjunechoe.github.io/posts/2021-06-24-setting-up-and-debugging-custom-fonts/) for more informations.
 
 
 ## Shiny
