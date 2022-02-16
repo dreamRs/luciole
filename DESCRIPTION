@@ -30,3 +30,4 @@ Suggests:
     rmarkdown, 
     tinytest
 VignetteBuilder: knitr
+URL: https://dreamrs.github.io/luciole/
