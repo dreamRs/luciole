@@ -22,7 +22,7 @@ documents, ggplot2 graphics, …).
 > Le caractère typographique Luciole a été conçu spécifiquement pour les personnes malvoyantes. Ce projet est le résultat de plus de deux années de collaboration entre le Centre Technique Régional pour la Déficience Visuelle et le studio typographies.fr. Le projet a bénéficié d'une bourse de la Fondation suisse Ceres et de l'appui du laboratoire DIPHE de l'Université Lumière Lyon 2.
 
 
-Other interesting links
+Other interesting links:
 
 * [Centre Technique Régional pour la Déficience Visuelle](http://www.ctrdv.fr/)
 * [typographies.fr](http://www.typographies.fr/)
