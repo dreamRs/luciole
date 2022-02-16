@@ -1,51 +1,42 @@
 
-#' Generate HTML tags used in examples
+#' Character set in HTML tags for examples
 #'
-#' @param class Class of the main div.
+#' @param ... Arguments passed to `tags$div`.
 #'
-#' @importFrom htmltools HTML tags css tagList
+#' @importFrom htmltools tags css tagList
 #'
 #' @return HTML tags.
 #' @export
 #'
 #' @examples
 #' tag_example()
-tag_example <- function(class = NULL) {
+tag_example <- function(...) {
   tags$div(
-    class = class,
-    tags$blockquote(
-      tags$p(HTML("&Eacute;coutez !")),
-      tags$p(HTML("Puisqu&rsquo;on allume les &eacute;toiles,")),
-      tags$p(HTML("C&rsquo;est qu&rsquo;elles sont &agrave; quelqu&rsquo;un n&eacute;cessaires ?")),
-      tags$p(HTML("C&rsquo;est que quelqu&rsquo;un d&eacute;sire qu&rsquo;elles soient ?")),
-      tags$br(),
-      tags$p(HTML("Vladimir Ma&iuml;akovski &ndash; &Eacute;coutez !"))
-    ),
-    tags$div(
-
-      lapply(
-        X = list(
-          paste(letters, collapse = ""),
-          paste(LETTERS, collapse = ""),
-          paste(0:9, collapse = "")
-        ),
-        FUN = function(x) {
-          tagList(
-            tags$p(
-              style = css(fontStyle = "normal"),
-              x
-            ),
-            tags$p(
-              style = css(fontStyle = "italic"),
-              x
-            ),
-            tags$p(
-              style = css(fontWeight = "bold"),
-              x
-            )
+    ...,
+    lapply(
+      X = list(
+        paste(letters, collapse = ""),
+        paste(LETTERS, collapse = ""),
+        paste(c(0:9, "$\u20ac\u00a3\u00a5"), collapse = ""),
+        "?,;.:/!()[]{}@&",
+        "\U00f7\U00d7\U2212\U002b\U220f\U222b\U221e"
+      ),
+      FUN = function(x) {
+        tagList(
+          tags$p(
+            style = css(fontStyle = "normal"),
+            x
+          ),
+          tags$p(
+            style = css(fontStyle = "italic"),
+            x
+          ),
+          tags$p(
+            style = css(fontWeight = "bold"),
+            x
           )
-        }
-      )
+        )
+      }
     )
   )
 }

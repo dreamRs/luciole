@@ -2,18 +2,18 @@
 % Please edit documentation in R/tag_example.R
 \name{tag_example}
 \alias{tag_example}
-\title{Generate HTML tags used in examples}
+\title{Character set in HTML tags for examples}
 \usage{
-tag_example(class = NULL)
+tag_example(...)
 }
 \arguments{
-\item{class}{Class of the main div.}
+\item{...}{Arguments passed to \code{tags$div}.}
 }
 \value{
 HTML tags.
 }
 \description{
-Generate HTML tags used in examples
+Character set in HTML tags for examples
 }
 \examples{
 tag_example()

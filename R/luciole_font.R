@@ -8,8 +8,13 @@
 #'  usually an HTML tag, default to `"body"` (all document).
 #'  If `NULL` style tag isn't included.
 #'
-#' @return an [htmltools::htmlDependency()].
+#' @return 
+#' * `luciole_font_dependency`: an [htmltools::htmlDependency()].
+#' * `attach_luciole`: an empty `div` with Luciole dependency attached.
+#' 
 #' @export
+#' 
+#' @name luciole-dependency
 #'
 #' @importFrom htmltools tags htmlDependency
 #' @importFrom utils packageVersion
@@ -30,6 +35,16 @@ luciole_font_dependency <- function(selector = "body") {
     stylesheet = "css/luciole.css",
     all_files = TRUE,
     head = css
+  )
+}
+
+#' @export
+#' 
+#' @rdname luciole-dependency
+attach_luciole <- function(selector = "body") {
+  htmltools::attachDependencies(
+    x = htmltools::tags$div(), 
+    value = luciole_font_dependency(selector = selector)
   )
 }
 
