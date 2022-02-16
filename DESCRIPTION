@@ -1,6 +1,6 @@
 Package: luciole
-Title: A typeface for Visually Impaired People
-Version: 0.0.0.9000
+Title: A Typeface for Visually Impaired People
+Version: 0.1.0
 Authors@R: 
     c(person(given = "Victor",
              family = "Perrier",
@@ -16,6 +16,7 @@ Authors@R:
              comment = "Luciole Typeface <https://luciole-vision.com>"))
 Description: A new typeface developed explicitly for visually impaired people.
     Visit the official website for more information: <https://luciole-vision.com>.
+    Functions are provided to use 'Luciole' in graphics ('ggplot2', ...) and 'HTML' documents ('rmarkdown', 'shiny')
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
