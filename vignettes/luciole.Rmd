@@ -22,14 +22,20 @@ knitr::opts_chunk$set(
 library(luciole)
 ```
 
+```{r attach-luciole, include=FALSE}
+attach_luciole()
+```
+
 
 ## ggplot2
 
 Add Luciole font with:
 
 ```{r add_luciole}
-add_luciole()
+add_luciole(showtext_auto = TRUE)
 ```
+
+It will add Luciole font family to 'sysfonts', and allow its use in graphics through the package [showtext](https://github.com/yixuan/showtext).
 
 
 Then declare the `"Luciole"` family in your graphics:
@@ -43,17 +49,33 @@ ggplot() +
 ```
 
 
+## R Markdown
+
+In a R Markdown document, you can use Luciole with an HTML output. Use a chunk like below in your Rmd:
+
+````
+```{r attach-luciole, include=FALSE}`r ''`
+attach_luciole()
+```
+````
+
+Then all text will be rendered using Luciole (like this document). Here's some examples character:
+
+```{r rmarkdown}
+tag_example(style = "font-size: 2rem;")
+```
+
 
 
 ## Shiny
 
-Load Luciole CSS file into your page with:
+Load Luciole CSS & font files into your page with:
 
 ```{r luciole_font, eval=FALSE}
 luciole_font_dependency()
 ```
 
-By default a style tag is injected in the head of the page to use Luciole in he whole body.
+By default a style tag is injected in the head of the page to use Luciole in all the HTML body.
 
 Example:
 
