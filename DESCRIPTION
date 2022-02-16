@@ -26,5 +26,6 @@ Imports:
     sysfonts
 Suggests: 
     ggplot2,
-    knitr
+    knitr,
+    rmarkdown
 VignetteBuilder: knitr
