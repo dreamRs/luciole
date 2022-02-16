@@ -27,5 +27,6 @@ Imports:
 Suggests: 
     ggplot2,
     knitr,
-    rmarkdown
+    rmarkdown, 
+    tinytest
 VignetteBuilder: knitr

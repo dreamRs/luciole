@@ -50,14 +50,14 @@ attach_luciole <- function(selector = "body") {
 
 
 
-font_luciole <- function() {
-  structure(list(
-    families = "'Luciole', sans-serif",
-    html_deps = htmltools::tagFunction(function() {
-      luciole::luciole_font_dependency(NULL)
-    })
-  ), class = c("font_collection", "list"))
-}
+# font_luciole <- function() {
+#   structure(list(
+#     families = "'Luciole', sans-serif",
+#     html_deps = htmltools::tagFunction(function() {
+#       luciole::luciole_font_dependency(NULL)
+#     })
+#   ), class = c("font_collection", "list"))
+# }
 
 
 
