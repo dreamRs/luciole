@@ -24,9 +24,9 @@ documents, ggplot2 graphics, …).
 
 Other interesting links
 
-[Centre Technique Régional pour la Déficience Visuelle](http://www.ctrdv.fr/)
-[typographies.fr](http://www.typographies.fr/)
-[Laboratoire DIPHE](https://diphe.univ-lyon2.fr/)
+* [Centre Technique Régional pour la Déficience Visuelle](http://www.ctrdv.fr/)
+* [typographies.fr](http://www.typographies.fr/)
+* [Laboratoire DIPHE](https://diphe.univ-lyon2.fr/)
 
 
 
@@ -48,6 +48,6 @@ For use in:
 * RMarkdown documents (HTML), see `?attach_luciole`
 * shiny applications, see `?luciole_font_dependency`
 
-For more examples and documentation, see [get Started page](https://dreamrs.github.io/luciole/articles/luciole.html).
+For more examples and documentation, see [get started page](https://dreamrs.github.io/luciole/articles/luciole.html).
 
 
